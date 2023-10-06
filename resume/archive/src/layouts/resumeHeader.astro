@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import HeadlineBio from "../components/HeadlineBio.astro";
+import HeadlineContactInfo from '../components/HeadlineContactInfo.astro';
+import LayoutSocials from '../components/LayoutSocials.astro';
+import profilePic from '../assets/images/atMuellerLakeMedium.jpg';
+const HEADLINE_NAME = "Jonathan Roll"; 
+---
+    <section id="wrapper--hero" class="section--page">
+
+        <!-- <img id="profile-pic" src="./assets/images/professional/atMuellerLakeMedium.jpg"> -->
+        <Image src={profilePic} alt="" id="profile-pic"/>
+
+        <div>
+            <h1 id="name-headline">{HEADLINE_NAME}</h1>
+            <div class="line-break"></div>
+            <HeadlineBio />
+        </div>
+    </section>
+    
+    <div class="line-break"></div>
+    <HeadlineContactInfo/>
+    <LayoutSocials/>
+    <div class="line-break"></div>

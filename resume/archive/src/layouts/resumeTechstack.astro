@@ -1,0 +1,25 @@
+---
+import Techstack from "../components/Techstack.astro";
+const { sectitle } = Astro.props;
+import { getCollection } from 'astro:content';
+const allEntries = await getCollection('techstack');
+---
+<section class="tech-stack-section--page">
+
+    <h2 class="section-heading--h2">{sectitle}</h2>
+    <div class="line-break"></div>
+
+    <div class="card--generic">
+        <div id="wrapper--techstack__items">
+            {
+                allEntries.map((e)=>(
+                    <Techstack
+                        heading={e.data.heading}
+                        body={e.body}
+                    />
+                ))
+            }
+        </div>
+    </div>
+    
+</section>

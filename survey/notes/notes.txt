@@ -1,0 +1,75 @@
+backend integration
+create integration
+
+middleware
+
+client
+
+integration
+
+
+login / auth options
+    auth0
+    firebase
+
+backend persitance options:
+    mongo - try?
+    firebase - next best, includes auth
+    supabase - maybe
+
+maybe try and setup all four:  firebase, auth0, mongo, supabase
+
+    tigris - no 
+    mysql - no
+
+firebase SSR birthday reminder app with Solid.js frontend
+https://github.com/kevinzunigacuellar/astro-firebase/blob/main/package.json
+
+firebase with authentication and login
+https://docs.astro.build/en/guides/backend/google-firebase/
+
+supabase with astro, react and supabase
+https://www.aleksandra.codes/astro-supabase#motivation
+https://github.com/beerose/everybody-gives-astro-supabase/blob/main/src/supabase.ts
+
+
+middleware integration
+https://github.com/withastro/astro/blob/latest/examples/middleware/src/middleware.ts
+
+
+mock backend using ssr and svelte
+https://github.com/withastro/astro/tree/latest/examples/ssr
+
+
+preact integration
+https://docs.astro.build/en/guides/integrations-guide/preact/
+
+astro starter kit for integration...
+Astro Starter Kit: Integration Package
+This is a template for an Astro integration. Use this template for writing integrations to use in multiple projects or publish to NPM.
+
+npm create astro@latest -- --template integration
+Open in StackBlitz Open with CodeSandbox Open in GitHub Codespaces
+
+🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+/
+├── index.ts
+├── tsconfig.json
+├── package.json
+The index.ts file is the "entry point" for your integration. Export your integration in index.ts to make them importable from your package.
+
+🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+Command	Action
+npm link	Registers this package locally. Run npm link my-integration in an Astro project to install your integration
+npm publish	Publishes this package to NPM. Requires you to be logged in
+Keywords
+
+
+
+

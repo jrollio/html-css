@@ -1,0 +1,10 @@
+---
+import Accomplishments from '../components/Accomplishments.astro';
+const { sectitle } = Astro.props;
+---
+<section class="section--page">
+    <h2 class="section-heading--h2">{sectitle}</h2>
+    <div class="card--generic">
+        <Accomplishments/>
+    </div>
+</section>

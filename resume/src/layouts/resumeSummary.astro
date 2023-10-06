@@ -1,0 +1,20 @@
+---
+const { sectitle } = Astro.props;
+import { getCollection } from 'astro:content';
+const allEntries = await getCollection('summary');
+---
+<section class="section--page">
+
+    <h2 class="section-heading--h2">{sectitle}</h2>
+    <div class="line-break"></div>
+    <ul id="qualifications--list">
+        {
+            allEntries.map((e:any)=>(
+                e.body.split('\n').map((b:any)=>(
+                    <li><Fragment set:html={b}/></li>
+                ))
+            ))
+        }
+    </ul>
+
+</section>

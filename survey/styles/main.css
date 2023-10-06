@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --mainTextColor-light:#000;
+    --secondaryTextColor-light:rgb(51 51 51);
+    --mainLinkColor-light:#0da2b8;
+    --mainBorderColor-light:rgb(218, 218, 218);
+    --mainBgColor-light:rgb(249, 250,251);
+
+    --mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#adb0b1;
+    --mainLinkColor-dark:rgb(30, 190,214);
+    --mainBorderColor-dark:#2b3031;
+    --mainBgColor-dark:#131415;
+    
+    --mainTextColor:var(--mainTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --mainLinkColor:var(--mainLinkColor-dark);
+    --mainBorderColor:var(--mainBorderColor-dark);
+    --mainBgColor:var(--mainBgColor-dark);
+
+}
+
+
+*{
+    font-family: 'Readex Pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+    
+}
+
+body{
+    background-color: var(--mainBgColor);            
+}
+
+p, span, li{
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li{
+    line-height: 1.9em;
+}
+
+
+
+
+/* IDs */
+#bio, a{
+    font-weight: 300;
+}
+#container--main{
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#email{
+    color: var(--mainTextColor);
+}
+#img-logo-job-kforce{
+    /* original w*h: 1000 x 264 */
+    /* inline-size: 10%; */
+    max-inline-size: 6.2rem;
+    min-inline-size: 6.2rem;
+    max-block-size: 1.6rem;
+    min-block-size: 1.6rem;
+    /* max-inline-size: 50%; */
+    padding: 0;
+    margin: 0;
+    /* max-width: 40%; */
+    /* max-width: 6rem; */
+    /* max-height: 10%; */
+}
+
+
+#profile-pic{
+    border-radius: 50%;
+    height: 130px;
+    margin: 1% 0 1% 5%;
+    object-fit: cover;
+    padding: 0 0 0 0;
+    transform: rotate(-12deg);
+    width: 130px;
+
+}
+#qualifications--list{
+    list-style: none;
+}
+
+
+#socials--list a{
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+#socials--list a:hover{
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 0.9em;
+}
+#work-history-wrapper{
+    width: 100%;
+}
+#wrapper--hero{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    vertical-align: top;
+    padding: 0 0 0 0;
+
+}
+
+
+
+#wrapper--techstack__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.1em;
+    font-size: 0.9em;
+}
+
+
+/* Classes */
+.card--boxlist{
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    margin: 0 0 0 5%;
+    align-items: center;
+    width: 88%;
+    display: inline-block;
+}
+.card--education{
+    /* padding-top: 1.5em; */
+    padding: 1rem 0 0 0;
+    /* line-height: 1px; */
+}
+.card--generic{
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-left: 1em;
+}
+
+.card--project{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid var(--mainBorderColor);
+    color: var(--secondaryTextColor);
+
+}
+
+.card--project a{
+    color: var(--mainTextColor);
+
+    transition: 0.3s;
+}
+
+.card--project a:hover{
+    color: rgb(30, 190,214);
+}
+.card--techstack{
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    display: inline-block;
+    align-items:center;
+    margin: 0.25em;
+}
+
+.card--work-history{
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+}
+
+
+.hr--card--techstack-sep{
+    border-bottom: 1.0px solid var(--mainBorderColor);
+    padding: 0.5% 0 0.5% 0;
+}
+
+.line-break{
+    background-color: var(--mainBorderColor);
+    height: 1px;
+}
+
+.p--education-degree{
+    /* line-height: 1rem; */
+    margin: 0 0 0 0;
+    /* font-size: 1rem; */
+    /* overflow-wrap: break-word; */
+}
+.p--education-school{
+    line-height: 1rem;
+    margin: 1px 0 0 0;
+    /* font-size: 1rem; */
+    /* overflow-wrap: break-word; */
+}
+.section-heading--h2{
+    line-height: 0.5em;
+}
+.section--page{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.section--split{
+    padding: 1% 0 1% 0;
+}
+.social--logo{
+    fill: var(--secondaryTextColor, currentColor);
+}
+.social--logo-a{
+    font-size:xx-small;
+    line-height: 0.1em;
+    fill: var(--mainTextColor);
+    color: var(--mainTextColor);
+}
+.social--logo-a-text{
+    line-height: .2rem;
+    vertical-align: top;
+}
+
+.table--contact-info{
+    width: 100%;
+    height: 25%;
+}
+
+.table--techstack{
+    margin: 0 8% 0 0;
+    min-width: 100%;
+}
+.table--work-experience{
+    width: 100%;
+}
+.table-work-history-header{
+    width: 100%;
+    line-height: 0.8em;
+}
+.table-work-history-header-row-2{
+    width: 100%;
+    line-height: 0.2rem;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.td--card--techstack{
+    padding: 0.2% 8% 0.2% 4%;
+    text-align: center;
+}
+
+.td--headline-contact-info *{
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+.td--headline-contact-info-lhs{
+    text-align: left;
+    width: 60%;
+}
+.td--headline-contact-info-rhs{
+    text-align: right;
+    width: 40%
+}
+
+.td-tech-stack-row-header{
+    width: 25%;
+    /* min-width: 8em; */
+    text-align: right;
+    vertical-align: top;
+    /* align-items: flex-start; */
+    padding: 0 0 0 4%;
+    /* padding: 3px 12px 0 0; */
+    /* margin: 0 12px 0 0; */
+    font-size: large;
+}
+
+.td-work-history-employer{
+    width: 30%;
+    text-align:left;
+}
+.td-work-history-employer-logo{
+    width: 6%;
+    padding: 0 1%;
+}
+.td-work-history-employer-name{
+    text-align:left;
+    vertical-align: text-top;
+    padding: 1% 0;
+}
+.td-work-history-from-to-dates{
+    text-align: right;
+}
+.td-work-history-summary{
+    width: 100%;
+    margin-left: .5em;
+    text-align: left;
+}
+.td-work-history-title{
+    width: 40%;
+    text-align: left;
+}
+
+.tech-stack-section--page{
+    padding-top: .5em;
+}
+
+.tr--contact-info{
+    line-height: 0.5rem;
+    height: 25%;
+}
+
+.ul--boxlist{
+    list-style: none;
+}
+
+/**
+ **  begin resume socials stanza
+**/
+.socials--list{
+    display: flex;
+    justify-content:center;
+    column-gap: 1em;
+    flex-wrap: wrap;
+    padding: 0 0 3% 0;
+}
+
+.table--socials{
+    width: 100%;
+    height: 50%;
+    line-height: 0.5rem;
+}
+.table--socials-row-2{
+    width: 100%;
+    height: 25%;
+    line-height: 0.5rem;
+}
+.td--socials-logo{
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: .2rem;
+    margin: 0%;
+    padding: 0%;
+}
+.td--socials-name{
+    width: 25%;
+    text-align: center;
+}
+.tr--socials{
+    line-height: 0.5rem;
+    height: 25%;
+}
+.socials--box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 0 2% 0 2%;
+}
+/**
+ **  end resume socials stanza
+**/
+
+@media (prefers-color-scheme:light){
+    :root{
+        --mainTextColor:var(--mainTextColor-light);
+        --secondaryTextColor:var(--secondaryTextColor-light);
+        --mainLinkColor:var(--mainLinkColor-light);
+        --mainBorderColor:var(--mainBorderColor-light);
+        --mainBgColor:var(--mainBgColor-light);
+    }
+}
+
+
+
+@media(max-width:600px){
+
+    .section--page{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #wrapper--hero{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #profile-pic{
+        width: 200px;
+        height: 200px;
+        margin: 0 0 0 0;
+    }
+
+    #wrapper--hero{
+        flex-direction: column;
+    }
+
+    .card--work-history{
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_paged_media */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/CSSPageRule */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@page */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/page */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@media */
+
+@media print {
+
+    *{
+        color: var(--mainTextColor-light);
+        font-weight: 300;
+    }
+    body{
+        background-color: var(--mainBgColor-light);            
+    }
+    p, span, li{
+        color: var(--secondaryTextColor-light);
+    }
+    a{
+        text-decoration: none;
+        color: var(--mainLinkColor-light);
+    }
+
+    #socials--list a{
+        color: var(--secondaryTextColor-light);
+        vertical-align: top;
+    }
+    
+    #socials--list a:hover{
+        color: var(--mainLinkColor-light);
+    }
+
+    .no-print *{
+        display: none;
+    }
+    .no-screen *{
+        display: unset;
+    }
+    .print-break-avoid{
+        page-break-inside: avoid;
+    }
+    .print-break-before{
+        page-break-before: always;
+    }
+  }
+  @media print {
+    @page {
+        margin-left: 0.8in;
+        margin-right: 0.8in;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+}
+

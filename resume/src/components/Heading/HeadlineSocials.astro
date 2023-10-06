@@ -1,0 +1,25 @@
+---
+import HeadlineSocialImage from './HeadlineSocialImage.astro';
+const {
+     logo_href, logo_target
+     , logo_class, link_href, link_target
+     , link_class, link_text
+     , svg
+    } = Astro.props;
+---
+<div>
+    <div class=socials--list>
+        <a href={logo_href} target={logo_target} class={logo_class}>
+            <div>
+                <HeadlineSocialImage
+                    svg={svg.slug}
+                />
+            </div>
+        </a>
+    </div>
+    <div>
+        <a href={link_href} target={link_target} class={link_class}>
+            {link_text}
+        </a>
+    </div>
+</div>

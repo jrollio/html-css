@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import WhBonus from './WhBonus.astro';
+const allEntries = await getCollection('workhistory');
+const Imgs = await Astro.glob('../../assets/workhistory/*');
+---
+{
+    allEntries.map((e:any) => (
+        <div class="card--work-history print-break-avoid">
+            {
+                e.data.wh_desc === '01-workhistory-kforce'
+                ?
+                    <table class="table-work-history-header">
+                        <tr>
+                            <td class="td-work-history-title">
+                                <strong>{e.data.title}</strong>
+                            </td>
+                            <!-- <td class="td-work-history-employer">
+                            </td> -->
+                            <td class="td-work-history-from-to-dates">
+                                {e.data.start_dt} - {e.data.end_dt}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-work-history-employer">
+                                <a aria-label={e.data.co_aria_label} aria-disabled="false" target="_self" href={e.data.co_href}>
+                                    <!-- Kforce -->
+                                    <Image src={Imgs[e.data.id-1].default}  alt="" width={Imgs[e.data.id-1].default.width} height={Imgs[e.data.id-1].default.height} id="img-logo-job-kforce"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                :
+                    <table class="table-work-history-header">
+                        <tr>
+                            <td class="td-work-history-title">
+                                <strong>{e.data.title}</strong>
+                            </td>
+                            <td class="td-work-history-from-to-dates">
+                                {e.data.start_dt} - {e.data.end_dt}
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table-work-history-header-row-2">
+                        <tr>
+                            <td class="td-work-history-employer-logo">
+                                <a href={e.data.co_href} target="_self" aria-label={e.data.co_aria_label} aria-disabled="false">
+                                    <Image src={Imgs[e.data.id-1].default}  alt="" width={Imgs[e.data.id-1].default.width} height={Imgs[e.data.id-1].default.width}/>
+                                </a>
+                            </td>
+                            <td class="td-work-history-employer-name">
+                                <a href={e.data.co_href} target="_self" aria-label={e.data.co_aria_label} aria-disabled="false">
+                                    {e.data.co_name}
+                                </a>
+                            </td>
+                        </tr>
+                    </table> 
+                }
+            <div class="line-break"></div>
+            <table class="table--work-experience">
+                <tr class="tr--work-experience">
+                    <td class="td-work-history-summary">
+                        <p>{e.data.wh_smry}</p>
+                    </td>
+                </tr>
+                <tr class="tr--work-experience">
+                    <td class="td--work-history--bullets">
+                        <ul class="ul--work-history--bullets">
+                            {e.body.split('\n').map((b)=>(
+                                <li>{b}</li>
+                            ))}
+                        </ul>
+                        <!-- optional section -->
+                        <WhBonus slug={e.data.wh_desc}/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        )
+    )
+}

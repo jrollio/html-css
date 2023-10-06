@@ -1,0 +1,65 @@
+<section class="section--page"><h2 class="section-heading--h2">Education</h2><div class="line-break"></div><div class="card--generic"><div class="card--education"><strong class="p--education-degree">Master of Science (M.S.), Computer Science</strong><sup style="font-size: 50%;">1</sup><p class="p--education-school">Georgia Tech</p></div><div class="card--education"><strong class="p--education-degree">Bachelor of Science (B.S.), Mathematics &amp; Computer Science</strong><p class="p--education-school">University of Toledo</p></div><p style="font-size:70%;"><sup style="font-size: 50%;">1 </sup> On pause following change in employment</p></div></section>
+
+                                <a aria-label={e.data.co_aria_label} aria-disabled="false" target="_self" href={e.data.co_href}>
+                                    <Image src={img_root} alt={e.data.co_logo_alt} id={e.data.co_logo_id}/>
+                                    <!-- Kforce -->
+                                </a>
+
+                                    {
+                                            // whbonusEntries.filter((f)=>e.slug === f.slug).map((fe)=>fe.body.split('\n').map((fb)=>(<li>{fb}</li>)))
+                                            <li>whbonusEntries.filter((f)=>e.slug === f.slug)</li>
+                                        }
+                                        {whbonusEntries.map((f)=>(<p>{e.slug}</p><p>{f.body}</p><p>{e.slug === f.slug}</p>))}
+
+
+
+                        <!-- optional section -->
+                        {
+                            if(whbonusEntries.filter((we)=>(we.slug === e.slug)).length){
+                                
+                            }
+                        }
+                        <div>
+                            <span class="card--boxlist">
+                                <ul class="ul--boxlist">
+                                        {whbonusEntries
+                                            .filter((we)=>(we.slug === e.slug))
+                                            .map((ent)=>ent.body.split('\n')
+                                                .map((li)=>(<p>{li}</p>))
+                                            )
+                                        }
+                                </ul>
+                            </span>
+                        </div>        
+
+
+                        <div>
+                            <span class="card--boxlist">
+                                <ul class="ul--boxlist">
+                                        {whbonusEntries
+                                            .filter((we)=>(we.slug === e.slug))
+                                            .map((ent)=>ent.body.split('\n')
+                                                .map((li)=>(<p>{li}</p>))
+                                            )
+                                        }
+                                </ul>
+                            </span>
+                        </div>       
+
+
+<div>
+    <div class=socials--list>
+        <a href={logo_href} target={logo_target} class={logo_class}>
+            <div>
+                <HeadlineSocialImage
+                    svg={svg.slug}
+                />
+            </div>
+        </a>
+    </div>
+    <div>
+        <a href={link_href} target={link_target} class={link_class}>
+            {link_text}
+        </a>
+    </div>
+</div>

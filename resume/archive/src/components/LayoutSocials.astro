@@ -1,0 +1,21 @@
+---
+import HeadlineSocial from './HeadlineSocials.astro'; 
+import { getCollection } from 'astro:content';
+const allEntries = await getCollection('socials');
+---
+<div class="socials--box">
+        {
+            allEntries.map((e)=>(
+            <HeadlineSocial
+                logo_href={e.data.href}
+                logo_target={e.data.logo_target}
+                logo_class={e.data.logo_class}
+                link_href={e.data.href}
+                link_target={e.data.link_target}
+                link_class={e.data.link_class}
+                link_text={e.data.link_text}
+                svg={e.data.svg}
+            />
+            ))
+        }
+</div>

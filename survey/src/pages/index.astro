@@ -1,0 +1,48 @@
+---
+import { mongo_uri } from 'src/consts';
+import '../../styles/main.css';
+import { MongoClient } from 'mongodb';
+
+const options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+fetch('https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=52cf7088bf1e4abfa02ec68be8f93eeb', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+
+const client = new MongoClient(mongo_uri);
+async function run() {
+  try {
+    
+    // Get the database and collection on which to run the operation
+    // const database = client.db("sample_mflix");
+    const database = client.db("survey");
+    const movies = database.collection("movies");
+    // Specify the document field to find distinct values for
+    const fieldName = "year";
+    // Specify an optional query document to narrow results
+    const query = { directors: "Barbra Streisand" };
+    // Execute the distinct operation
+    const distinctValues = await movies.distinct(fieldName, query);
+    // Print the result
+    console.log(distinctValues);
+  } finally {
+    await client.close();
+  }
+}
+// run().catch(console.dir);
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+	<body>
+		{run().catch(console.dir)}
+	</body>
+</html>

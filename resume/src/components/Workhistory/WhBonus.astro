@@ -1,0 +1,14 @@
+---
+import { getEntry } from 'astro:content';
+const { slug } = Astro.props;
+const whbonusEntry = await getEntry('whbonus',slug);
+---
+{ whbonusEntry &&
+    <div>
+        <span class="card--boxlist">
+            <ul class="ul--boxlist">
+                { whbonusEntry.body.split('\n').map((el)=>(<li>{el}</li>)) }
+            </ul>
+        </span>
+    </div>
+}

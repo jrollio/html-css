@@ -1,0 +1,56 @@
+a   y
+#bio, a n
+body    y
+.card--boxlist  y
+.card--education    y
+.card--generic  y
+.card--project  y
+.card--project a    y
+.card--project a:hover  y
+.card--techstack    y
+.card--work-history y
+#container--main    y
+.hr--card--techstack-sep    y
+#img-logo-job-kforce    y
+li  y
+.line-break y
+.p--education   y
+#profile-pic    y
+p, span, li y
+#qualifications--list   y
+.section-heading--h2    y
+.section--page  y
+.social--logo   y
+.social--logo-a y
+.social--logo-a-text    y
+.social--logo-svg-container y
+#socials--list  y
+#socials--list a    y
+#socials--list a:hover  y
+.table--contact-info    y
+.table--socials y
+.table--socials-row-2   y
+.table--techstack   y
+.table--work-experience y
+.table-work-history-header  y
+.table-work-history-header-row-2    y
+.td--card--techstack    y
+.td--headline-contact-info *    y
+.td--headline-contact-info-lhs  y
+.td--headline-contact-info-rhs  y
+.td--socials-logo   y
+.td--socials-name   y
+.td-tech-stack-row-header   y
+.td-work-history-employer   y
+.td-work-history-employer-logo  y
+.td-work-history-employer-name  y
+.td-work-history-from-to-dates  y
+.td-work-history-summary    y
+.td-work-history-title  y
+.tech-stack-section--page   y
+.tr--contact-info   y
+.tr--socials    y
+.ul--boxlist    y
+#work-history-wrapper   y
+#wrapper--hero  y
+#wrapper--techstack__items  y

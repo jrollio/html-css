@@ -1,0 +1,19 @@
+---
+const { heading, body } = Astro.props;
+---
+<table class="table--techstack">
+    <tr>
+        <td class="td-tech-stack-row-header">
+            {heading}
+        </td>
+        <td class="td--card--techstack">
+            <div>
+                { 
+                body.split('\n').map((b:any)=>(
+                    <span class="card--techstack">{b}</span>
+                ))}
+                <div class="hr--card--techstack-sep"></div>
+            </div>
+        </td>
+    </tr>
+</table>
