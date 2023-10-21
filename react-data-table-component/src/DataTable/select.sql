@@ -157,3 +157,42 @@ drop and create cash table as select from importable
 
 sqlite> select * from cash where postdt between '2023-09-01' and '2023-10-01' order by postdt;
 
+
+
+drop table pl;
+create table if not exists
+pl (
+    "type" text null /* 1 */
+    ,"class" text null /* 2 */
+    ,"dt" text null /* 3 */
+    ,"date" text null /* 4 */
+    ,"transaction" real null /* 5 */
+    ,"id" text null /* 6 */
+    ,"name" text null /* 7 */
+    ,"memodesc" text null /* 8 */
+    ,"split" text null /* 9 */
+    ,"amt" text null /* 10 */
+    ,"bal" text null /* 11 */
+);
+delete quotes and header, strip leading/trailing space from all fields
+.import PL20222023.txt pl
+
+
+
+select substr(dt,0,5)||'-'||substr(dt,5,2)||'-'||substr(dt,7,2) from pl;
+
+select
+substr(dt,0,5) as 'yr'
+,substr(dt,5,2) as 'mo'
+,substr(dt,7,5) as 'dy'
+
+select
+
+
+=IF(ISERR(SEARCH("CHECK ",D6)),D6,"CHECK")
+
+=IF(ISERR(SEARCH("ORIG CO NAME:",D6)),D6,"CHECK")
+"ORIG CO NAME:INTUIT 30045475        ORIG ID:9215986202 DESC DATE:231012 CO ENTRY DESCR:TRAN FEE  SEC:CCD    TRACE#:021000027940468 EED:231012   IND ID:524771999470493              IND NAME:JESTER CLUB INC TRN: 2857940468TC"
+replace(replace(iif(instr(description,"CHECK "),"CHECK",iif(instr(description,"   "),iif(instr(description,"CO ENTRY DESCR:"),iif(instr(description," SEC:"),substr(description,0,instr(description,"   "))||substr(description,instr(description,"CO ENTRY DESCR:"),instr(description," SEC:")-instr(description,"CO ENTRY DESCR:")),substr(description,0,instr(description,"   "))),substr(description,0,instr(description,"   "))),description)),"""""""",""),'"','') as "dsc"
+
+/Users/dad/Library/CloudStorage/OneDrive-Personal
